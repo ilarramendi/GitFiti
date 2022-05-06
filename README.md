@@ -1,16 +1,20 @@
-Script to draw pixelart on github repository
+# Gitfiti
 
-Requirements:
-    python3 and library Requests
+### Inspired from [gelstudios/gitfiti](https://github.com/gelstudios/gitfiti)  
+Script to draw pixelart on github repository    
 
-Usage:
-    [New Repository](https://github.com/new) => Create a new GitHub repository
-    python3 Gitfiti.py -> Generates a bash file
-    sh Gitfiti.sh -> Creates and pushes commits, will ask for username and password if not stored in system
+## Requirements:
+python3 and library Requests    
 
-Parameters:
-    -u user -> Username (optional)
-    -r n    -> Repository number (optional)
-    -rm path -> Path to readme (optional)
+## Usage:  
+[New Repository](https://github.com/new) => Create a new GitHub repository  
+Run: ```python3 Gitfiti.py``` -> Generates a bash file  
+Run: ```sh Gitfiti.sh``` -> Creates and pushes commits, will ask for username and pa  ssword if not stored in system    
 
-If a parameter is missing it will be asked for interactively
+## Parameters:  
+If a parameter is missing it will be asked for interactively  
+|Usage    | Description            |
+|---------|------------------------|
+|-u user  | Username (optional)    |
+|-r number| Repo number (optional) |
+
