@@ -1,13 +1,12 @@
 # Gitfiti
-
-Script to draw images on github repository, it can also do animations now!   
+Script to draw images and animations on github commit history!   
 Inspired from [gelstudios/gitfiti](https://github.com/gelstudios/gitfiti)  
+![2022-05-06 23_44_38-ilarramendi (Iñaki Larramendi)](https://user-images.githubusercontent.com/30437204/167234917-441aa936-e62b-4def-80f8-92c6a0010de7.png)  
 
 Requirements: ```python3``` and ```GitHub CLI```.  
 Works only for linux ATM.
 
-## Usage:  
-
+## Usage:
 ### Single
 Executes the script a single time and generates a bash script to draw image.  
 [New Repository](https://github.com/new) => Create a new GitHub repository  
@@ -51,3 +50,10 @@ Run: ```python3 GitfitiAnimation.py -u USER -t TOKEN```
 |-c NUMBER | Max commits/Day (OPTIONAL)           |
 |-ut NUMBER| Time it takes to update a frame (OPT)|
 |-ft NUMBER| Time between frames (OPTIONAL)       |
+
+## Planned features
+- [ ] Improve framerate (10 SPF would be nice)
+- [ ] Make main file a class that can be imported by the other files
+- [ ] Make main file work with Windows
+- [ ] Add clock
+- [ ] Find out why left portion is not looking that clean
