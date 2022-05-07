@@ -9,6 +9,7 @@ Works only for linux ATM.
 ## Usage:
 ### Single
 Executes the script a single time and generates a bash script to draw image.  
+If you want your commits not to disturb the image make the max commits number 4x higher than the maximum number of commmits you have in a single day.  
 [New Repository](https://github.com/new) => Create a new GitHub repository  
 Run: ```python3 Gitfiti.py``` -> Generates a bash file  
 Run: ```sh Gitfiti.sh``` -> Creates and pushes commits, will ask for username and pa  ssword if not stored in system    
@@ -24,6 +25,7 @@ Run: ```sh Gitfiti.sh``` -> Creates and pushes commits, will ask for username an
 This mode is intended to be used in conjunction with CRONTAB to be executed once a week (Sundayt idk at what time), when the first row of a new column is added.  
 It will delete the repo, create it again and upload the image automaticaly.  
 
+To get an access token go [here](https://github.com/settings/tokens/new) and check: repo and delete_repo.  
 Run: ```python3 GitfitiAutomatic.py -u USER -t TOKEN```
 
 |Usage    | Description                     |
