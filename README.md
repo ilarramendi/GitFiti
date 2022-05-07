@@ -35,9 +35,10 @@ Run: ```python3 GitfitiAutomatic.py -u USER -t TOKEN```
 |-c NUMBER| Max commits/Day (OPTIONAL)      |
 
 ### Animation
-This is the most demanding mode for both ends, it renders a frame after a certain ammount of time generating a somewat seemless animation.  
+This is the most demanding mode for both ends, it renders a frame after a certain ammount of time generating a somewat seemless animation.
+A running example can be found on my profile page (1 frame each 30 seconds): [GitHub/ilarramendi](https://github.com/ilarramendi)  
 Frames are stored in: ```/frames```, and are rendered in alphabetical order in a loop, the number of frames can be any.  
-With the default max number of commits and images it can render at a speed of 1 frame / 30 seconds.  
+With the default max number of commits and frames it can render at a speed of 1 frame / 30 seconds.  
 Lowering the total ammount of commit will allow a faster framerate (lowering max commits or the actual colors inside each frame).  
 
 Run: ```python3 GitfitiAnimation.py -u USER -t TOKEN```  
