@@ -46,22 +46,20 @@ else:
     print('Username: ', end='')
     USER = input()
 
-repos = requests.get(GITHUB_URL + '/users/' + USER + '/repos')
-if repos.status_code != 200:
-    print("Wrong username")
-    quit()
-    
-
 # Repository
-repos = list(map(lambda r: r['name'], repos.json()))
-
-if len(repos) == 0:
-    print('Create a repositorie first.')
-    quit()
-
-if '-rn' in argv and len(argv) >= argv.index('-rn') + 1 and argv[argv.index('-rn') + 1] in repos:
+if '-rn' in argv and len(argv) >= argv.index('-rn') + 1:
     REPO = argv[argv.index('-rn') + 1]
 elif '-r' not in argv or len(argv) <= argv.index('-r') + 1:
+    repos = requests.get(GITHUB_URL + '/users/' + USER + '/repos')
+    if repos.status_code != 200:
+        print("Wrong username", repos.content)
+        quit()
+    if len(repos) == 0:
+        print('Create a repositorie first.')
+        quit()
+    
+    repos = list(map(lambda r: r['name'], repos.json()))
+
     i = 0
     for repo in repos: 
         print(str(i) + ' ' + repo)
@@ -95,7 +93,7 @@ with open('Gitfiti.sh', 'w') as out:
         for i in reversed(range(7)):
             date = (start - timedelta(days=363 - i - j * 7)).strftime('%Y-%m-%d')
             times = int(image[i][j] * MAX_COMMITS / 4)
-            for i in range(times): out.write('GIT_AUTHOR_DATE=' + date + 'T12:00:00 git commit --allow-empty -m '' --allow-empty-message >> /dev/null\n')
+            for i in range(times): out.write('GIT_AUTHOR_DATE=' + date + 'T12:00:00 git commit --allow-empty --allow-empty-message -m "" >> /dev/null\n')
     
     token = argv[argv.index('-t') + 1] if '-t' in argv and len(argv) >= argv.index('-t') + 1 else ''
 
