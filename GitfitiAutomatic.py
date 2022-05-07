@@ -2,7 +2,11 @@ import requests
 from time import sleep
 from subprocess import run, DEVNULL
 
-TOKEN = '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'
+if '-t' not in argv or len(argv) < argv.index('-t'):
+	print('Missing Token (-t TOKEN)')
+	exit()
+TOKEN = argv[argv.index('-t') + 1]
+
 USERNAME = 'ilarramendi'
 DATA = {
   'name': 'dummy',

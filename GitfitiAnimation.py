@@ -7,7 +7,10 @@ from threading import Thread
 
 # TODO imporve framerate
 
-TOKEN = ''
+if '-t' not in argv or len(argv) < argv.index('-t'):
+	print('Missing Token (-t TOKEN)')
+	exit()
+TOKEN = argv[argv.index('-t') + 1]
 USERNAME = 'ilarramendi'
 REPO_PREFIX = 'DUMMY_'
 
